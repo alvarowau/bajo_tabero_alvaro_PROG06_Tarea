@@ -136,7 +136,7 @@ public class Vehiculo implements Serializable {
      * @param precio El nuevo precio del vehículo.
      */
     public void setPrecio(BigDecimal precio) {
-        this.precio = precio;
+        this.precio = precio.setScale(2, RoundingMode.HALF_UP);
     }
 
     /**
